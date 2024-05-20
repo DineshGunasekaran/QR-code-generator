@@ -1,0 +1,108 @@
+/* QR code generator app style */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #252429;
+}
+
+.continer {
+  width: 400px;
+  max-width: 500px;
+  background: #fff;
+  min-height: 200px;
+  max-height: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 16px;
+  padding: 40px;
+
+}
+
+.continer p {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+#inputText {
+  width: 100%;
+  padding: 14px;
+  margin: 20px 0 30px ;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+.generateBtn {
+  background-color: #494eea;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 10px 10px rega(0,0,0, 0.1);
+  cursor: pointer;
+  margin: 20px 0;
+  border: 0;
+}
+
+.generateBtn:active {
+  transform: rotateY(16deg);
+}
+
+#imgDiv {
+  width: 200px;
+  border-radius: 6px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.5s;  
+}
+
+#imgDiv img {
+  width: 100%;
+  padding: 10px;
+}
+
+#imgDiv.show-qr {
+  max-height: 300px;
+  margin: 10px auto;
+  border: 1px solid #d1d1d1;
+}
+
+/* This error class for input text box if that don't have values */
+
+.error {
+  animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+  0%{
+    transform: translateX(0);
+  }
+  25%{
+    transform: translateX(-4Px);
+  }
+  50%{
+    transform: translateX(0);
+  }
+  75%{
+    transform: translateX(4px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+#title {
+  font-size: 20px;
+  font-weight: 600px;
+  text-align: center;
+  padding: 6px;
+  color: #1e0a6b;
+}
